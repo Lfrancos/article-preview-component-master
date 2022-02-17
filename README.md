@@ -52,6 +52,8 @@ This was an interesting exercise. I wanted to create a certain functionality dep
 
 I want to get a little bit more knowledge of animations. Right now I've been taking all the time to understand functionality (witch is good) but I want to make it look good as well.
 
+> I just realized that the way the shareCard is disappearing is not the optimal way. As soon as it is hiding it goes to the back I need to make it go to the back as soon as the animation finishes.
+
 ### Useful resources
 
 - [Resource 1](https://isotropic.co/tool/hex-color-to-css-filter/) -This is a pretty good resource since it helps add the color that you want for your svg and it will give you the filter that you need to add.
