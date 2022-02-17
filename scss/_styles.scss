@@ -3,21 +3,29 @@ body {
     padding: 1rem;
     font-family: $font;
 }
+
 .card {
     max-width: 31.25rem;
     min-width: 20.4375rem;
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0px 40px 70px -10px $color-very-Dark-Grayish-Blue;
+    position: relative;
+}
+
+.banner {
+    border-radius: 1rem 1rem 0 0;
 }
 h1, h2 {
     color: $color-very-Dark-Grayish-Blue;
+    font-weight: bold;
 }
 p {
     color: $color-Desaturated-Dark-Blue;
     font-size: 0.8125rem;
     margin-top: 1rem;
 }
+
 .content {
     max-width: 400px;
     padding: 2rem;
@@ -40,9 +48,6 @@ p {
             // width: 30%;
         }
 }
-.banner {
-    border-radius: 1rem 1rem 0 0;
-}
 .author-card {
     margin-top: 4rem;
 }
@@ -62,6 +67,49 @@ margin-right: 1rem;
     img {
         width: 40%;
     }
+}
+.share {
+    // display: none;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 500ms ease-in-out;
+    background-color: $color-very-Dark-Grayish-Blue;
+    padding: 1rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    cursor: pointer;
+    .left {
+        gap: 1rem;
+    }
+    p {
+        margin-top: 0;
+        letter-spacing: .4rem;
+    }
+    .right {
+        .circle{
+            background-color: $color-Desaturated-Dark-Blue
+        }
+
+    }
+    .circle {
+        img {
+            filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(49deg) brightness(200%) contrast(100%);
+        }
+    }
+}
+.share .left img:hover {
+    filter: invert(70%) sepia(29%) saturate(5498%) hue-rotate(329deg) brightness(93%) contrast(90%);
+}
+.share-button {
+    cursor: pointer;
+}
+.share.open {
+    // display: flex;
+    opacity: 1;
+    z-index: 2;
+
 }
 
 @media screen and (min-width: 850px) {
@@ -86,6 +134,17 @@ margin-right: 1rem;
     }
     .content {
         max-width: 500px;;
+    }
+    .share {
+        border-radius: .5rem;
+        max-width: 248px;
+        padding: .6rem;
+        bottom: 80px;
+        right: -70px;
+        justify-content: center;;
+        .right {
+            display: none;
+        }
     }
     // .content {
     //     margin: 3rem;

@@ -182,10 +182,16 @@ body {
   border-radius: 1rem;
   -webkit-box-shadow: 0px 40px 70px -10px #48556a;
           box-shadow: 0px 40px 70px -10px #48556a;
+  position: relative;
+}
+
+.banner {
+  border-radius: 1rem 1rem 0 0;
 }
 
 h1, h2 {
   color: #48556a;
+  font-weight: bold;
 }
 
 p {
@@ -212,10 +218,6 @@ p {
   height: 50%;
 }
 
-.banner {
-  border-radius: 1rem 1rem 0 0;
-}
-
 .author-card {
   margin-top: 4rem;
 }
@@ -236,6 +238,52 @@ p {
 
 .circle img {
   width: 40%;
+}
+
+.share {
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
+  background-color: #48556a;
+  padding: 1rem 2rem;
+  border-radius: 0 0 1rem 1rem;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.share .left {
+  gap: 1rem;
+}
+
+.share p {
+  margin-top: 0;
+  letter-spacing: .4rem;
+}
+
+.share .right .circle {
+  background-color: #6d7f97;
+}
+
+.share .circle img {
+  -webkit-filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(49deg) brightness(200%) contrast(100%);
+          filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(49deg) brightness(200%) contrast(100%);
+}
+
+.share .left img:hover {
+  -webkit-filter: invert(70%) sepia(29%) saturate(5498%) hue-rotate(329deg) brightness(93%) contrast(90%);
+          filter: invert(70%) sepia(29%) saturate(5498%) hue-rotate(329deg) brightness(93%) contrast(90%);
+}
+
+.share-button {
+  cursor: pointer;
+}
+
+.share.open {
+  opacity: 1;
+  z-index: 2;
 }
 
 @media screen and (min-width: 850px) {
@@ -262,6 +310,19 @@ p {
   }
   .content {
     max-width: 500px;
+  }
+  .share {
+    border-radius: .5rem;
+    max-width: 248px;
+    padding: .6rem;
+    bottom: 80px;
+    right: -70px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .share .right {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
